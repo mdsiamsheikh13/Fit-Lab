@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { usePlan } from "@/context/PlanContext";
 
 const NavBar = () => {
     const pathname = usePathname();
+    const { plan, saved } = usePlan();
 
     const isActive = (href) => {
         return pathname === href;
@@ -35,6 +37,14 @@ const NavBar = () => {
                     className={`${linkClass} ${isActive("/my-plan") ? activeClass : ""}`}
                 >
                     My plan
+                </Link>
+            </li>
+            <li>
+                <Link
+                    href="/saved"
+                    className={`${linkClass} ${isActive("/saved") ? activeClass : ""}`}
+                >
+                    Saved
                 </Link>
             </li>
         </>
@@ -100,18 +110,18 @@ const NavBar = () => {
                         >
                             Plan
                             <span className="rounded-full bg-[#C2F800] px-2 py-1 text-sm font-bold text-black">
-                                0
+                                {plan.length}
                             </span>
                         </Link>
 
                         {/* Saved */}
                         <Link
-                            href="/my-plan"
+                            href="/saved"
                             className="flex items-center gap-2 font-semibold transition-colors"
                         >
                             Saved
-                            <span className="rounded-full  px-2 py-1 text-sm font-bold border text-white">
-                                0
+                            <span className="rounded-full px-2 py-1 text-sm font-bold border text-white">
+                                {saved.length}
                             </span>
                         </Link>
                     </div>

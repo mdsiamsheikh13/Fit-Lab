@@ -2,6 +2,7 @@ import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/shared/NavBar";
 import Footer from "./components/shared/Footer";
+import { PlanProvider } from "@/context/PlanContext";
 
 const oswald = Oswald({
   weight: ["400", "700"],
@@ -24,9 +25,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
       <body className="min-h-full flex flex-col bg-[#0c0d10]">
-        <NavBar />
-        {children}
-        <Footer />
+        <PlanProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </PlanProvider>
       </body>
     </html>
   );

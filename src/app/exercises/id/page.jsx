@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { CiBookmark, CiCalendar } from "react-icons/ci";
+import AddToPlanButton from "@/app/components/workouts/AddToPlanButton";
+import SaveForLaterButton from "@/app/components/workouts/SaveForLaterButton";
 
 const getExerciseData = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
@@ -121,15 +122,9 @@ const ExerciseDetailsPage = async ({ params }) => {
                 </div>
 
                 <div className="flex items-center gap-5">
-                    <button className="btn bg-[#CCFF00] text-black text-sm hover:bg-[#ccff0046]">
-                        <CiCalendar />
-                        Add to today's plan
-                    </button>
+                    <AddToPlanButton exercise={exercise} />
 
-                    <button className="btn border text-sm text-white">
-                        <CiBookmark />
-                        Save for later
-                    </button>
+                    <SaveForLaterButton exercise={exercise} />
                 </div>
             </div>
         </section>

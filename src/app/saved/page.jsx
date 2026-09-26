@@ -4,25 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePlan } from "@/context/PlanContext";
 
-const MyPlanPage = () => {
-    const { plan, removeFromPlan } = usePlan();
+const SavedPage = () => {
+    const { saved, removeFromSaved } = usePlan();
 
     return (
         <section className="mx-5 my-10 md:mx-10">
             <div className="mb-8">
-                <h1 className="text-4xl font-bold text-white">Today's Plan</h1>
+                <h1 className="text-4xl font-bold text-white">Saved Workouts</h1>
 
                 <p className="mt-2 text-[#9CA3AF]">
-                    {plan.length} exercise{plan.length !== 1 ? "s" : ""} added
+                    {saved.length} saved workout{saved.length !== 1 ? "s" : ""}
                 </p>
             </div>
 
-            {plan.length === 0 ? (
+            {saved.length === 0 ? (
                 <div className="rounded-xl border border-gray-900 bg-[#15171D] p-10 text-center">
-                    <h2 className="text-xl font-bold text-white">Your plan is empty</h2>
+                    <h2 className="text-xl font-bold text-white">No saved workouts</h2>
 
                     <p className="mt-2 text-[#9CA3AF]">
-                        Add some exercises to start your workout plan.
+                        Save exercises for later and they will appear here.
                     </p>
 
                     <Link href="/exercises" className="btn mt-5 bg-[#CCFF00] text-black">
@@ -31,7 +31,7 @@ const MyPlanPage = () => {
                 </div>
             ) : (
                 <div className="flex flex-col gap-5">
-                    {plan.map((exercise) => (
+                    {saved.map((exercise) => (
                         <div
                             key={exercise.id}
                             className="flex flex-col overflow-hidden rounded-xl border border-gray-900 bg-[#15171D] md:flex-row"
@@ -73,9 +73,9 @@ const MyPlanPage = () => {
 
                                     <button
                                         onClick={() => {
-                                            removeFromPlan(exercise.id);
+                                            removeFromSaved(exercise.id);
                                             alert(
-                                                `${exercise.name} has been removed from your plan.`,
+                                                `${exercise.name} has been removed from your saved workouts.`,
                                             );
                                         }}
                                         className="btn border border-red-500 text-red-500"
@@ -92,4 +92,4 @@ const MyPlanPage = () => {
     );
 };
 
-export default MyPlanPage;
+export default SavedPage;
