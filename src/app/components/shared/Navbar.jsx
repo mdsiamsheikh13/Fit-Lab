@@ -43,7 +43,7 @@ const NavBar = () => {
 
     return (
         <div className="border-b-2 border-gray-800 mb-5">
-            <div className="m-3">
+            <div className="m-10">
                 <div className="navbar">
                     {/* Logo + Mobile Menu */}
                     <div className="navbar-start">

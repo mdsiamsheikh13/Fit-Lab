@@ -5,16 +5,19 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="border-t-2 border-gray-800 my-5">
-            <div className="footer sm:footer-horizontal  text-neutral-content items-center justify-between py-10 m-3 ">
-                <Link href="/" className="flex items-center gap-4 text-xl">
-                    <Image src={Logo} width={28} height={28} alt="FITLOG Logo" />
+        <footer className="border-t-2 border-gray-800 ">
+            <div className="m-10">
+                <div className="mx-3 flex flex-col items-center my-5 justify-between gap-4 py-8 sm:flex-row sm:py-10">
+                    <Link href="/" className="flex items-center gap-3 text-xl">
+                        <Image src={Logo} width={28} height={28} alt="FITLOG Logo" />
 
-                    <h2 className="text-xl font-bold">FITLOG</h2>
-                </Link>
-                <p className="text-[#6B7280]">
-                    © 2026 FitLog — Workout Library. Train hard, log honest.
-                </p>
+                        <h2 className="text-xl font-bold">FITLOG</h2>
+                    </Link>
+
+                    <p className="text-center text-sm text-[#6B7280] sm:text-base">
+                        © 2026 FitLog — Workout Library. Train hard, log honest.
+                    </p>
+                </div>
             </div>
         </footer>
     );
