@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import BannerImg from "@/assets/banner.png";
+// import BannerImg from "../../../../public/banner.png";
 
 const Banner = () => {
     return (
@@ -29,7 +29,7 @@ const Banner = () => {
 
                 <div className="shrink-0">
                     <Image
-                        src={BannerImg}
+                        src="/banner.png"
                         width={335}
                         height={335}
                         alt="Banner Image"

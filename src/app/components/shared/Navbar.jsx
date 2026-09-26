@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-import Logo from "@/assets/logo.png";
+// import Logo from "../../../../public/logo.png";
 
 const NavBar = () => {
     const pathname = usePathname();
@@ -43,7 +43,7 @@ const NavBar = () => {
 
     return (
         <div className="border-b-2 border-gray-800 mb-5">
-            <div className="m-10">
+            <div className="mx-10 my-5">
                 <div className="navbar">
                     {/* Logo + Mobile Menu */}
                     <div className="navbar-start">
@@ -81,7 +81,7 @@ const NavBar = () => {
 
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-4 text-xl">
-                            <Image src={Logo} width={28} height={28} alt="FITLOG Logo" />
+                            <Image src="/logo.png" width={28} height={28} alt="FITLOG Logo" />
 
                             <h2 className="text-xl font-bold">FITLOG</h2>
                         </Link>
@@ -122,4 +122,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default NavBar; 
