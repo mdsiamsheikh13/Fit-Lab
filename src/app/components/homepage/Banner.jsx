@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-
 const Banner = () => {
     return (
         <section className="m-10">
             <div className="flex flex-col items-center justify-between rounded-xl bg-[#15171D] sm:flex-row h-auto sm:h-120">
-                <div className="w-full space-y-4 p-6 sm:w-150 sm:p-10 md:p-12 lg:p-15">
+                <div className="w-full h-100 space-y-4 p-6 sm:w-150 sm:p-10 md:p-12 lg:p-15">
                     <p className="text-[#C2F800] text-[11px] uppercase">
                         Workout Library
                     </p>

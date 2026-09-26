@@ -39,14 +39,6 @@ const NavBar = () => {
                     My plan
                 </Link>
             </li>
-            <li>
-                <Link
-                    href="/saved"
-                    className={`${linkClass} ${isActive("/saved") ? activeClass : ""}`}
-                >
-                    Saved
-                </Link>
-            </li>
         </>
     );
 

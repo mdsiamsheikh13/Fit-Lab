@@ -6,9 +6,12 @@ import React from "react";
 const getExerciseData = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
 
+    console.log("Status:", res.status);
+    console.log("Response:", res);
+
     if (!res.ok) {
-        throw new Error("Failed to fetch exercises");
-    }
+        throw new Error(`Failed to fetch exercises: ${res.status}`);
+        }
 
     return res.json();
 };
