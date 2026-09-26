@@ -7,7 +7,7 @@ import { IoIosLeaf } from "react-icons/io";
 const ExerciseCard = ({ exercise }) => {
     return (
         <Link
-            href={`/workouts/${exercise.id}`}
+            href={`/exercises/${exercise.id}`}
             className="block rounded-xl bg-[#15171D] transition-transform hover:-translate-y-1"
         >
             <Image
