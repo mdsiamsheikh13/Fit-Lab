@@ -2,7 +2,7 @@ import { Oswald, Inter } from "next/font/google";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
-import NavBar from "./components/shared/NavBar";
+import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import { PlanProvider } from "@/context/PlanContext";
 import { ToastContainer } from "react-toastify";
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
       <body className="min-h-full flex flex-col bg-[#0c0d10]">
         <PlanProvider>
-          <NavBar />
+          <Navbar />
 
           {children}
 
