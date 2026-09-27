@@ -4,6 +4,16 @@ FITLOG is a modern workout and exercise tracking web application built with **Ne
 
 The application uses a REST API to retrieve exercise information and provides an interactive interface for organizing selected workouts.
 
+## 🚀 Live Demo
+
+[Visit FITLOG](https://fit-lab-nu.vercel.app/)
+
+## 🔗 GitHub Repository
+
+[View Source Code](https://github.com/mdsiamsheikh13/Fit-Lab)
+
+---
+
 ## 🚀 Technologies Used
 
 * Next.js
@@ -16,6 +26,8 @@ The application uses a REST API to retrieve exercise information and provides an
 * REST API
 * Next.js App Router
 * Next.js Image
+
+---
 
 ## ✨ Key Features
 
@@ -258,25 +270,25 @@ FITLOG uses the App Router to organize its pages and application routes.
 
 ## 🛠️ Getting Started
 
-Clone the repository:
+### Clone the Repository
 
 ```bash
 git clone https://github.com/mdsiamsheikh13/Fit-Lab.git
 ```
 
-Navigate to the project directory:
+### Navigate to the Project Directory
 
 ```bash
 cd Fit-Lab
 ```
 
-Install the dependencies:
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### Start the Development Server
 
 ```bash
 npm run dev
