@@ -29,4 +29,6 @@ const Exercises = async () => {
   );
 };
 
+
+
 export default Exercises;
