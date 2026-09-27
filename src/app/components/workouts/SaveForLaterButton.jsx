@@ -1,6 +1,7 @@
 "use client";
 
 import { CiBookmark } from "react-icons/ci";
+import { toast } from "react-toastify";
 import { usePlan } from "@/context/PlanContext";
 
 const SaveForLaterButton = ({ exercise }) => {
@@ -10,11 +11,13 @@ const SaveForLaterButton = ({ exercise }) => {
     const alreadySaved = saved.some((item) => item.id === exercise.id);
 
     if (alreadySaved) {
-      alert("This exercise is already saved for later.");
+      toast.info("This exercise is already saved for later.");
       return;
     }
 
     saveForLater(exercise);
+
+    toast.success(`${exercise.name} saved for later!`);
   };
 
   return (
